@@ -1,0 +1,24 @@
+Esto es una lista de comandos que nos serán de utilidad para usar GitHub en nuestros PC´s
+#Nota, en nuestras consolas tenemos que tener instalado Git.
+
+1- git clone (link del repositorio)
+Crea una carpeta en nuestro escritorio que contiene los archivos del repositorio.
+
+2- git status
+Muestra el estado de los archivos del repositorio. Nótese que si modificamos uno de los
+archivos en nuestro PC, si bien estará guardado en nuestro PC, no estará en línea a menos
+que nosotros lo subamos manualmente.
+
+3- git add (nombre del archivo)
+Agrega todos los archivos que queramos cambiar. El comando permite colocar mas de un archivo
+a la vez, para hacerlo, es de la forma (git add (nombre_1) (nombre_2) (nombre_3)...).
+
+4- git commit -m "(comentario)"
+Permite colocar comentarios de los cambios realizados, nótese que el comentario DEBE ir
+entre comillas.
+
+5- git push
+Envía los archivos que agregamos en el comando 3 al repositorio.
+
+Los comandos estan ordenados "cronológicamente", es decir, primero se usa el 1, luego el 2,
+luego el 3, etc.
