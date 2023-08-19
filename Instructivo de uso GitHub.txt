@@ -1,8 +1,9 @@
-Esto es una lista de comandos que nos serán de utilidad para usar GitHub en nuestros PC´s
+Esta es una lista de comandos que nos serán de utilidad para usar GitHub en nuestros PC´s
 #Nota, en nuestras consolas tenemos que tener instalado Git.
 
-1- git clone (link del repositorio)
-Crea una carpeta en nuestro escritorio que contiene los archivos del repositorio.
+1- git clone https://github.com/lansieta-usm/IWG-PROY4.git
+Crea una carpeta en nuestro escritorio que contiene los archivos del repositorio (el link va
+textualmente tal cual como está).
 
 2- git status
 Muestra el estado de los archivos del repositorio. Nótese que si modificamos uno de los
