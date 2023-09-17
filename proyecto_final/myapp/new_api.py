@@ -2,6 +2,7 @@ from urllib.parse import quote
 
 def url_to_qr(text):
     # Codificar el texto en URL
+    
     encoded_text = quote(text)
     
     # Crear la URL con el texto codificado
