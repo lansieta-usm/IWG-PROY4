@@ -23,3 +23,10 @@ Envía los archivos que agregamos en el comando 3 al repositorio.
 
 Los comandos estan ordenados "cronológicamente", es decir, primero se usa el 1, luego el 2,
 luego el 3, etc.
+
+
+
+ZONA DE COMANDOS EXTRA!
+
+1- git rm -r (nombre_archivo)
+Permite eliminar del repositorio un archivo indeseado. Para que funcione correctamente debemos ejecutar este comando y después ejecutar todos los comandos de arriba desde el comando 4 (git commit -m) en adelante.
