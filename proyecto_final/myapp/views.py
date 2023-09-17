@@ -11,7 +11,7 @@ def about(request):
 
 def user(request):
     users = Usuario.objects.all()
-    return render(request, "users.html")
+    return render(request, "users.html", {"users" : users})
 
 def añadir(request):
     return render(request, "añadir.html")

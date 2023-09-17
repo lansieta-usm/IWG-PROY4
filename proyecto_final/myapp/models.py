@@ -20,7 +20,7 @@ class Usuario(models.Model):
     codigo= models.TextField(default="default")
 
     def __str__(self):
-        return f'name: {self.name}, padeciineto: {self.padecimiento}, alergias: {self.alergias}, contact: {self.contact}, num_contact: {self.num_contact}, codigo: {self.codigo}'
+        return f'name: {self.name}, padecimiento: {self.padecimiento}, alergias: {self.alergias}, contact: {self.contact}, num_contact: {self.num_contact}, codigo: {self.codigo}'
 
     def save(self, *args, **kwargs):
         try:
