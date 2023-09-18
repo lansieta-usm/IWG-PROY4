@@ -17,6 +17,7 @@ class Usuario(models.Model):
     alergias = models.TextField()
     contact = models.CharField(max_length=20)
     num_contact = models.IntegerField()
+    recomendaciones_condicion = models.TextField(default="No se encontraron recomendaciones para esta condición")
     codigo= models.TextField(default="default")
 
     def __str__(self):
