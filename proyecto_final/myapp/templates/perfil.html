@@ -1,0 +1,30 @@
+{% extends "layouts/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<h1> Perfil </h1>
+
+    <h2>
+        Nombre: {{perfil.name}}
+    </h2>
+    <h2>
+        Condicion: {{perfil.padecimiento}}
+    </h2>
+    <h2>
+        Alergias: {{perfil.alergias}}
+    </h2>
+    <h2>
+        Contacto de emergencia: {{perfil.contact}}
+    </h2>
+    <h2>
+        numero de emergencia: {{perfil.num_contact}}
+    </h2>
+    <h2>
+        Recomendaciones y precacuciones: {{perfil.recomendaciones_condicion}}
+    </h2>
+
+    <img src="{{perfil.codigo}}" alt="" width="100">
+
+{% endblock %}

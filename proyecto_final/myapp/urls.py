@@ -8,4 +8,5 @@ urlpatterns = [
     path('users/', views.user, name="users"),
     path('anadir/', views.registro_usuario, name="anadir"),
     path('blog/', views.blog, name="blog"),  #no prioridad 2
+    path('perfil/<int:id>', views.perfil, name="perfil"),
 ]

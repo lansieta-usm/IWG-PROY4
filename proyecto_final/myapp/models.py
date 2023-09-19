@@ -30,7 +30,7 @@ class Usuario(models.Model):
         except Condicion.DoesNotExist:
             recomendaciones_condicion = "No se encontraron recomendaciones para esta condición."
 
-        plantilla_a_qr = f'Nombre: {self.name}\nCondición: {self.padecimiento}\nAlergias: {self.alergias}\nContacto: {self.contact}\nNúmero de Contacto: {self.num_contact}\nRecomendaciones: {recomendaciones_condicion}'
+        plantilla_a_qr = f'Nombre: {self.name}\nCondicion: {self.padecimiento}\nAlergias: {self.alergias}\nContacto: {self.contact}\nNumero de Contacto: {self.num_contact}\nRecomendaciones: {recomendaciones_condicion}'
         qr = url_to_qr(plantilla_a_qr)
 
         self.codigo = qr
