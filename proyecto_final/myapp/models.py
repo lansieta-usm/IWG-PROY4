@@ -1,5 +1,6 @@
 from django.db import models
 from .new_api import url_to_qr
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Condicion(models.Model):
@@ -9,8 +10,6 @@ class Condicion(models.Model):
     def __str__(self):
         return self.condicion+ self.recomendacion
 
-
-
 class Usuario(models.Model):
     name = models.CharField(max_length=20)
     padecimiento = models.CharField(max_length=20, default="default")
@@ -19,9 +18,10 @@ class Usuario(models.Model):
     num_contact = models.IntegerField()
     recomendaciones_condicion = models.TextField(default="No se encontraron recomendaciones para esta condición")
     codigo= models.TextField(default="default")
+    user= models.ForeignKey(User, on_delete=models.CASCADE, null=True, blank=True)
 
     def __str__(self):
-        return f'name: {self.name}, padecimiento: {self.padecimiento}, alergias: {self.alergias}, contact: {self.contact}, num_contact: {self.num_contact}, codigo: {self.codigo}'
+        return f'name: {self.name}'
 
     def save(self, *args, **kwargs):
         try:

@@ -1,0 +1,21 @@
+{% extends "layouts/base.html" %}
+
+{% load static %}
+
+{% block content %}
+
+<h1> Iniciar sesion </h1>
+
+
+{{error}}
+
+<form action="" method="POST">
+    {% csrf_token %}
+    {{form.as_p}}
+
+    <button>
+        signin
+    </button>
+</form>
+
+{% endblock %}

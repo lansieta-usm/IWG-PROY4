@@ -18,17 +18,30 @@
                 <a href="{% url 'home' %}" > Home 🏠</a>
             </li>
             <li>
-                <a href="{% url 'users' %}" > Usuarios 🚻</a>
-            </li>
-            <li>
-                <a href="{% url 'anadir' %}" > Añadir Usuarios ➕</a>
-            </li>
-            <li>
                 <a href="{% url 'blog' %}" >  Blog 📝</a>
             </li>
             <li>
                 <a href="{% url 'about' %}" > Sobre Nosotros 🤔</a>
             </li>
+            {% if user.is_authenticated %}
+
+            <li>
+                <a href="{% url 'signout' %}" > Logout 🤔</a>
+            </li>
+            <li>
+                <a href="{% url 'perfil' %}" > perfil 🚻</a>
+            </li>
+            {% else %}
+
+            <li>
+                <a href="{% url 'signup' %}" > Regístrate</a>
+            </li>
+            
+            <li>
+                <a href="{% url 'signin' %}" > Iniciar sesión</a>
+            </li>
+
+            {% endif %}
         </ul>
     </nav>
     
