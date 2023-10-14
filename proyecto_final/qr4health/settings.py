@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-#%z427q0n*b_p3)b#d*xlsxvf%k@a96v!e&3urfau-k^y#eozg
 DEBUG = False
 
 ALLOWED_HOSTS = ['0.0.0.0']
-PORT = int(os.environ.get("PORT", 8000))
+PORT = int(os.environ.get("PORT", 8080))
 
 # Application definition
 
