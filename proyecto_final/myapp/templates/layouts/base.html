@@ -1,7 +1,7 @@
 {% load static %}
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA.Compatible" content="IE=edge">
@@ -10,62 +10,147 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
 
 </head>
-<body>
-    
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="{% url 'home' %}"><img src=" {% static 'github 4.jpg' %}" alt="" width="100"></a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'blog' %}">Blog</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="{% url 'about' %}">Sobre Nosotros</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    
-    
+  <body>
     <nav>
-        <ul>
-            {% if user.is_authenticated %}
-
-            <li>
-                <a href="{% url 'signout' %}" > Logout 🤔</a>
-            </li>
-            <li>
-                <a href="{% url 'perfil' %}" > perfil 🚻</a>
-            </li>
-            {% else %}
-
-            <li>
-                <a href="{% url 'signup' %}" > Regístrate</a>
-            </li>
-            
-            <li>
-                <a href="{% url 'signin' %}" > Iniciar sesión</a>
-            </li>
-
-            {% endif %}
-        </ul>
+      <ul>
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'home' %}"><img src="{% static 'logo.png' %}" alt="" width="100"></a>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'blog' %}">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'about' %}">Sobre Nosotros</a>
+                </li>
+                <!-- A la derecha -->
+                {% if user.is_authenticated %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'perfil' %}" > Perfil</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'signout' %}" > Cerrar Sesión</a>
+                {% else %}
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'signup' %}" > Regístrate </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'signin' %}" > Iniciar Sesión </a>
+                </li>
+                {% endif %}
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </ul>
     </nav>
-    
-    <main>
-        {% block content %}
-        {% endblock %}
-    </main>
+
+<main>
+  {% block content %}
+  {% endblock %}
+</main>
 
 </body>
+
+<!-- Footer -->
+<footer class="text-center text-lg-start bg-light text-muted">
+  <!-- Section: Social media -->
+  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+    <!-- Left -->
+    <div class="me-5 d-none d-lg-block">
+      <span>QR4Health</span>
+    </div>
+    <!-- Left -->
+
+    <!-- Right -->
+    <div>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-twitter"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-google"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-linkedin"></i>
+      </a>
+      <a href="" class="me-4 text-reset">
+        <i class="fab fa-github"></i>
+      </a>
+    </div>
+    <!-- Right -->
+  </section>
+  <!-- Section: Social media -->
+
+  <!-- Section: Links  -->
+  <section class="">
+    <div class="container text-center text-md-start mt-5">
+      <!-- Grid row -->
+      <div class="row mt-3">
+        <!-- Grid column -->
+        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+          <!-- Content -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            <i class="fas fa-gem me-3"></i>QR4Health - IWG101 - USM
+          </h6>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa vitae, quaerat recusandae tenetur sint, maiores ratione possimus repudiandae animi a ipsum maxime quod et cum consequuntur. Suscipit nisi eveniet natus!
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">
+            Asociaciones:
+          </h6>
+          <p>
+            <a class="text-reset" href="https://www.encuentrosalzheimer.cl/">Encuentros Alzheimer</a>
+          </p>
+          <p>
+            <a class="text-reset" href="https://www.ligaepilepsia.cl/">Liga Chilena contra la Epilepsia</a>
+          </p>
+          <p>
+            <a class="text-reset" href="https://www.autismoactivo.cl/">Autismo Activo</a>
+          </p>
+        </div>
+        <!-- Grid column -->
+
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+          <!-- Links -->
+          <h6 class="text-uppercase fw-bold mb-4">Quiénes llevamos a cabo este proyecto:</h6>
+          <p><i class="fas fa-home me-3"></i> Lucas Ansieta</p>
+          <p>
+            <i class="fas fa-envelope me-3"></i> Gabriel Delgado</p>
+          <p><i class="fas fa-phone me-3"></i> Nicolás Lillo</p>
+          <p><i class="fas fa-print me-3"></i> Miguel Quitral</p>
+        </div>
+        <!-- Grid column -->
+      </div>
+      <!-- Grid row -->
+    </div>
+  </section>
+  <!-- Section: Links  -->
+
+  <!-- Copyright -->
+  <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+    © 2021 Copyright:
+    <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+</footer>
+<!-- Footer -->
+
 </html>
