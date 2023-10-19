@@ -4,18 +4,20 @@
 
 {% block content %}
 
-<h1> Iniciar Sesión </h1>
+<div class="container">
 
+    <p>
+    <h1> Iniciar Sesión </h1>
+    {{error}}
+    <form action="" method="POST">
+        {% csrf_token %}
+        {{form.as_p}}
+        <button>
+            Iniciar Sesión
+        </button>
+    </form>
+    </p>
 
-{{error}}
-
-<form action="" method="POST">
-    {% csrf_token %}
-    {{form.as_p}}
-
-    <button>
-        Iniciar Sesión
-    </button>
-</form>
+</div>
 
 {% endblock %}
