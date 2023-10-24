@@ -1,3 +1,4 @@
+#
 from django.shortcuts import render, redirect, get_object_or_404
 from .forms import RegistroUsuarioForm
 from .models import Usuario, Condicion
