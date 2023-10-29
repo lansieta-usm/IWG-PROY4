@@ -6,6 +6,7 @@ from django.contrib.auth.models import User
 from django.contrib.auth import login, logout, authenticate
 from django.db import IntegrityError
 from django.contrib.auth.decorators import login_required
+from django.http import HttpResponse
 
 
 # Create your views here.
@@ -50,6 +51,21 @@ def registro_usuario(request):
 @login_required
 def perfil(request):
     u = Usuario.objects.get(user=request.user)
+    url = u.codigo
+
+    # Comprobar si se hizo clic en el enlace de descarga
+    if request.GET.get('download_qr_code'):
+        # Descargar el código QR y entregarlo como un archivo
+        import requests
+
+        
+        response = requests.get(url)
+        image_data = response.content
+
+        response = HttpResponse(image_data, content_type="image/png")
+        response['Content-Disposition'] = 'attachment; filename="codigo_qr.png"'
+        return response
+
     return render(request, "perfil.html", {"perfil": u})
 
 def signup(request):
