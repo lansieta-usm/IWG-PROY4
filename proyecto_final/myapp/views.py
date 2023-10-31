@@ -8,7 +8,6 @@ from django.db import IntegrityError
 from django.contrib.auth.decorators import login_required
 from django.http import HttpResponse
 
-
 # Create your views here.
 def home(request):
     return render(request, "home.html")
@@ -25,6 +24,9 @@ def añadir(request):
 
 def blog(request):
     return render(request, "blog.html")
+
+def post1(request):
+    return render(request, "posts/post-1.html")
 
 def registro_usuario(request):
     if request.method == 'POST':
