@@ -4,33 +4,38 @@
 
 {% block content %}
 
-<div class="container">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
 
-    <p>
-    <h1> Mi Perfil </h1>
-        <h2>
-            Nombre: {{perfil.name}}
-        </h2>
-        <h2>
-            Condicion: {{perfil.padecimiento}}
-        </h2>
-        <h2>
-            Alergias: {{perfil.alergias}}
-        </h2>
-        <h2>
-            Contacto de emergencia: {{perfil.contact}}
-        </h2>
-        <h2>
-            Número de emergencia: {{perfil.num_contact}}
-        </h2>
-        <h2>
-            Recomendaciones y precacuciones {{perfil.recomendaciones_condicion}}
-        </h2>
-    <img src="{{perfil.codigo}}" alt="" width="500">
-    <a href="?download_qr_code=1">Descargar QR Code</a>
+<div class="container mt-5">
+    <div class="card profile-card">
+        <div class="card-header bg-gradient-primary text-white">
+            <h1 class="text-center"><i class="fas fa-user-circle"></i> Mi Perfil</h1>
+        </div>
+        <div class="card-body">
+            <div class="profile-image text-center">
+                <img src="{% static 'familia.jpg' %}" alt="" class="img-fluid mb-3" width="500">
+            </div>
 
-    </p>
+            <div style="margin-bottom: 20px;"></div>
 
+            <div class="profile-info">
+                <h2><i class="fas fa-user"></i> Nombre: {{ perfil.name }}</h2>
+                <h2><i class="fas fa-heartbeat"></i> Condición: {{ perfil.padecimiento }}</h2>
+                <h2><i class="fas fa-allergies"></i> Alergias: {{ perfil.alergias }}</h2>
+                <h2><i class="fas fa-phone"></i> Contacto de emergencia: {{ perfil.contact }}</h2>
+                <h2><i class="fas fa-phone-square"></i> Número de emergencia: {{ perfil.num_contact }}</h2>
+                <h2><i class="fas fa-exclamation-triangle"></i> Recomendaciones y precauciones: {{ perfil.recomendaciones_condicion }}</h2>
+            </div>
+
+            <div class="profile-image mt-3">
+                <img src="{{ perfil.codigo }}" alt="" class="img-fluid" width="450">
+            </div>
+            <div class="mt-3">
+                <a href="?download_qr_code=1" class="btn btn-primary"><i class="fas fa-download"></i> Descargar QR Code</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 {% endblock %}
