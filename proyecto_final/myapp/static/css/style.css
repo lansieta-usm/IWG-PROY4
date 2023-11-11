@@ -1,0 +1,14 @@
+/* Agrega estos estilos en tu style.css */
+.counter-card {
+    background-color: #f8f9fa;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+.counter {
+    font-size: 36px;
+    font-weight: bold;
+    color: #007bff; /* Color azul Bootstrap */
+}
