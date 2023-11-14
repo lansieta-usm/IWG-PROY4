@@ -3,13 +3,48 @@
 {% load static %}
 
 {% block content %}
-<div class="container">
 
-    <p>
-    <h1> Sobre Nosotros </h1>
-    Somos un grupo de estudiantes de la universidad técnica Federico Santa María que con mucho cariño y empeño hemos construido este proyecto con el fin de mejorar el trato que se le da a las personas en situaciones críticas en que se necesite acceder a su ficha médica.
-    </p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-</div>
+        .about-section {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 50px;
+        }
+
+        .text {
+            width: 60%;
+        }
+
+        .image {
+            width: 30%; /* se ajusta segun necesidad */
+            border-radius: 8px; /* radio para bordes redondeados */
+        }
+    </style>
+</head>
+<body>
+
+    <section class="about-section">
+        <div class="text">
+            <h1> Sobre Nosotros </h1>
+            <p>Somos un grupo de estudiantes de la universidad técnica Federico Santa María que con mucho cariño y empeño hemos construido este proyecto con el fin de mejorar el trato que se le da a las personas en situaciones críticas en que se necesite acceder a su ficha médica.</p>
+        </div>
+        <img class="image" src="{% static 'foto collage.png' %}" alt="En orden de izq a derecha y de arriba hacia abajo, Gabriel Delgado, Lucas Ansietta, Miguel Quitral y Nicolás Lillo">
+    </section>
+
+</body>
+</html>
 
 {% endblock %}
+
