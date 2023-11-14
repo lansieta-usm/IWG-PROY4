@@ -7,7 +7,8 @@
   
   <p>
   <h1> Blog </h1>
-    <div style="display: flex; justify-content: flex-start;">
+    <div style="display: flex; justify-content: space-around;">
+
       <div class="card" style="width: 18rem;">
         <img src="{% static 'post-1.png' %}" class="card-img-top" alt="...">
         <div class="card-body">
@@ -35,6 +36,21 @@
           <a href="{% url 'post-1' %}" class="btn btn-primary">Leer más...</a>
         </div>
       </div>
+
+      <div class="card" style="width: 18rem;">
+        <img src="{% static 'logo.png' %}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Post #3</h5>
+          <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia sunt non tempora vel voluptatum placeat, nam mollitia sint recusandae quam.</p>
+        </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">Autor: Lucas</li>
+          </ul>
+        <div class="card-body">
+          <a href="{% url 'post-1' %}" class="btn btn-primary">Leer más...</a>
+        </div>
+      </div>
+
     </div>
   </p>
 

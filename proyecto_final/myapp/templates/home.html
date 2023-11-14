@@ -4,13 +4,17 @@
 
 {% block content %}
 
-<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+<div class="container">
+
 <script src="{% static 'js/bootstrap.min.js' %}"></script>
 
 <link rel="stylesheet" href="./style.css">
 
-<div class="container">
+<link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 
+    <p>
+        <h1> Inicio </h1>
+        <!-- Carrusel -->
     <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
@@ -24,8 +28,8 @@
             <div class="carousel-item active">
                 <img src="{% static 'familia.jpg' %}" class="d-block w-100" alt="...">
                 <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Some representative placeholder content for the first slide.</p>
+                    <h5>Bienvenidos a QR4Health</h5>
+                    <p>Somos un grupo de estudiantes cuyo propósito es combinar tecnología, medicina e inclusión! Conócenos!</p>
                 </div>
             </div>
             <div class="carousel-item">
@@ -54,22 +58,15 @@
             <span class="visually-hidden">Next</span>
         </button>
     </div>
-
+    <!-- Fin Carrusel -->
+    ㅤ
     <p>
-        <h1> Inicio </h1>
-        <div class="card text-bg-dark">
-            <img src="{% static 'logo.png' %}" class="card-img" alt="...">
-            <div class="card-img-overlay">
-                <h5 class="card-title">¡Bienvenidos a QR4Health!</h5>
-                <p class="card-text">Somos 4 estudiantes de la Universidad Técnica Federico Santa María con
-                    ganas de ayudar a quienes más lo necesitan.</p>
-                <p class="card-text"><small>Al ingresar podrás obtener un código QR único para ti que le
-                        permitirá a la gente que esté cerca tuyo conocer tus enfermedades y afecciones previas
-                        en caso de accidentes o crisis para poder ser tratado de mejor manera. Sigue disfrutando
-                        en familia con más seguridad!</small></p>
-            </div>
-        </div>
+    Bienvenido(a) a QR4 Health! Al <a href="{% url 'signup' %}">registrarte</a> podrás obtener un código QR único para ti que le permitirá a la gente que esté cerca tuyo conocer tus antecedentes médicos previos en caso de accidentes o crisis para poder ser tratado de mejor manera. Sigue disfrutando en familia con más seguridad!
+    </p>
+
     </p>
 </div>
+
+
 
 {% endblock %}
