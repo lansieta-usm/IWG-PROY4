@@ -28,6 +28,12 @@ def blog(request):
 def post1(request):
     return render(request, "posts/post-1.html")
 
+def post2(request):
+    return render(request, "posts/post-2.html")
+
+def post3(request):
+    return render(request, "posts/post-3.html")
+
 def registro_usuario(request):
     if request.method == 'POST':
         condicion_b = request.POST['condicion'],
