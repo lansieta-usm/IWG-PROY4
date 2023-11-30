@@ -61,12 +61,45 @@
     <!-- Fin Carrusel -->
     ㅤ
     <div class="blur-container">
-        <p>
+        <p class="fs-4 text-justify">
          Bienvenido(a) a QR4 Health! Al <a href="{% url 'signup' %}">registrarte</a> podrás obtener un código QR único para ti que le permitirá a la gente que esté cerca tuyo conocer tus antecedentes médicos previos en caso de accidentes o crisis para poder ser tratado de mejor manera. Sigue disfrutando en familia con más seguridad!
          </p>
     </div>
+
+    <!-- opiniones -->
+
+    <div style="margin-bottom: 200px;"></div>
+
+    <div class="row">
+        <div class="col-md-6">
+            <img src="{% static 'qr salud.jpeg' %}" class="img-fluid rounded" width="70%">
+        </div>
+        <div class="col-md-6">
+            <div class="blur-container">
+                <p class="fs-4 text-justify">
+                    QR4Health es una aplicación diseñada para proporcionar acceso rápido y seguro a información médica vital. Genera códigos QR personalizados que contienen tus antecedentes médicos para situaciones de emergencia.           
+                 </p>
+            </div>
+        </div>
+
+    </div>
+    
+    <div style="margin-bottom: 75px;"></div>
+    
+    <div class="row">
+        <div class="col-md-6">
+            <div class="blur-container">
+                <p class="fs-4 text-justify">
+                    En momentos críticos, tu código QR brinda a tu entorno acceso instantáneo a información relevante, permitiendo ser asistidos de forma más efectiva. ¡Tu seguridad está en tus manos!
+                </p>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <img src="{% static 'primeros auxilios.jpeg' %}" class="img-fluid rounded" width="70%" >
+        </div>
+    </div>
+
 </div>
-
-
+    
 
 {% endblock %}
