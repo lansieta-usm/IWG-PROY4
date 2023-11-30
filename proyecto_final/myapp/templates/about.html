@@ -8,6 +8,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -28,7 +29,19 @@
         }
 
         .image {
-            width: 30%; /* se ajusta segun necesidad */
+            width: 30%; /* se ajusta según necesidad */
+            border-radius: 8px; /* radio para bordes redondeados */
+        }
+
+        .card {
+            width: 18rem;
+            margin: 20px;
+        }
+
+        .card img {
+            width: 100%;
+            height: 300px; /* Ajusta la altura según tus necesidades */
+            object-fit: cover; /* Asegura que la imagen cubra completamente el contenedor */
             border-radius: 8px; /* radio para bordes redondeados */
         }
     </style>
@@ -38,13 +51,56 @@
     <section class="about-section">
         <div class="text">
             <h1> Sobre Nosotros </h1>
-            <p>Somos un grupo de estudiantes de la universidad técnica Federico Santa María que con mucho cariño y empeño hemos construido este proyecto con el fin de mejorar el trato que se le da a las personas en situaciones críticas en que se necesite acceder a su ficha médica.</p>
+            <p>Somos un grupo de estudiantes de la Universidad Técnica Federico Santa María que con mucho cariño y empeño hemos construido este proyecto con el fin de mejorar el trato que se le da a las personas en situaciones críticas en que se necesite acceder a su ficha médica.</p>
         </div>
-        <img class="image" src="{% static 'foto collage.png' %}" alt="En orden de izq a derecha y de arriba hacia abajo, Gabriel Delgado, Lucas Ansietta, Miguel Quitral y Nicolás Lillo">
+        <img class="image" src="{% static 'foto collage.png' %}" alt="En orden de izquierda a derecha y de arriba hacia abajo, Gabriel Delgado, Lucas Ansietta, Miguel Quitral y Nicolás Lillo">
     </section>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{% static 'foto gabriel.jpg' %}" class="card-img-top" alt="Foto de Gabriel Delgado">
+                    <div class="card-body">
+                        <h5 class="card-title">Gabriel Delgado</h5>
+                        <p class="card-text">Descripción sobre Gabriel.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{% static 'foto collage.png' %}" class="card-img-top" alt="Foto de Lucas Ansietta">
+                    <div class="card-body">
+                        <h5 class="card-title">Lucas Ansietta</h5>
+                        <p class="card-text">Descripción sobre Lucas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{% static 'foto collage.png' %}" class="card-img-top" alt="Foto de Miguel Quitral">
+                    <div class="card-body">
+                        <h5 class="card-title">Miguel Quitral</h5>
+                        <p class="card-text">Descripción sobre Miguel.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3">
+                <div class="card">
+                    <img src="{% static 'foto nico.jpg' %}" class="card-img-top" alt="Foto de Nicolás Lillo">
+                    <div class="card-body">
+                        <h5 class="card-title">Nicolás Lillo</h5>
+                        <p class="card-text">Descripción sobre Nicolás.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 </html>
 
 {% endblock %}
-
